@@ -22,8 +22,8 @@ title: Governing Dynamics
 email: srinivasan.raghavan88@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Govering Dynamics is my blog where i am going to share my experience in 
-Software Security, Engineering leadership , Java Language, Algorithms,
-Economics
+  Software Security, Engineering leadership , Java Language, Algorithms,
+  Economics
 baseurl: "/governing_dynamics" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: raghavan_srini
