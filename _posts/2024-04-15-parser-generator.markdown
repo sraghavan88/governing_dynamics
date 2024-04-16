@@ -5,13 +5,13 @@ date:   2024-04-15 06:21:52 -0400
 categories: Compilers
 ---
 ### Prologue
-The first stage of the compilation process is the pasring and undestanding the sytax of a language. Parsers job is look at code and make sure it follows the approved syntax of the grammer and also manipulate code structure to add or extract information
+The first stage of the compilation process is the parsing and understanding of the syntax of a language. The Parsers job is to look at code and make sure it follows the approved syntax of the grammar and also manipulate code structure to add or extract information
 
 ### What are Parser Generators
-Programs that recognize languages are called parsers or syntax analyzers. A grammar is just a set of rules, each one expressing the structure of a phrase. The ANTLR tool and tools like yaac translates grammars to parsers which are ready made code to parse the defined laguage in the grammar. Grammars themselves follow the syntax of a language optimized for specifying other languages
+Programs that recognize languages are called parsers or syntax analyzers. A grammar is just a set of rules, each one expressing the structure of a phrase. The ANTLR tool and tools like yaac translate grammar to parsers which are ready-made codes to parse the defined language in the grammar. Grammars themselves follow the syntax of a language optimized for specifying other languages
 
 ### An example of a grammar
-The grammar below can be used parse an array of integers.
+The grammar below can be used to parse an array of integers.
 
 {% highlight ruby %}
 grammar ArrayInit;
@@ -26,7 +26,7 @@ WS : [ \t\n]+ -> skip ; # Skip white spaces
 
 ### How to organize code
 
-We can organize the code in following way for Antlr to generate parsers from the g4 file. Keep the `g4` files in a `antlr4` directory and make the sure the package structure matches between the `java` code and `antlr4` 
+We can organize the code in the following way for Antlr to generate parsers from the g4 file. Keep the `g4` files in a `antlr4` directory and make sure the package structure matches between the `java` code and `antlr4` 
 
 {% highlight bash %}
 └── exampleAntlr
@@ -35,23 +35,23 @@ We can organize the code in following way for Antlr to generate parsers from the
     ├── exampleAntlr.iml
     ├── pom.xml
     ├── src
-    │   └── main
-    │       ├── antlr4
-    │       │   └── com
-    │       │       └── srini
-    │       │           └── antrl4
-    │       │               ├── ArrayInit.g4
-    │       ├── java
-    │       │   └── com
-    │       │       └── srini
-    │       │           └── antrl4
-    │       │               └── TestAntlr.java
+    │   └── main
+    │       ├── antlr4
+    │       │   └── com
+    │       │       └── srini
+    │       │           └── antrl4
+    │       │               ├── ArrayInit.g4
+    │       ├── java
+    │       │   └── com
+    │       │       └── srini
+    │       │           └── antrl4
+    │       │               └── TestAntlr.java
 
 {% endhighlight %}
 
 ### Run the generated parser 
-A maven install can generate the lexer parser for the g4 grammar. 
-The below code can take an array like `{1,2,3,4}` and parse it and form the tree of the its components. 
+A Maven install can generate the lexer parser for the g4 grammar. 
+The below code can take an array like `{1,2,3,4}` and parse it and form the tree of its components. 
 
 {% highlight java %}
 ANTLRInputStream input = new ANTLRInputStream("{1,2,3,4}");
@@ -69,10 +69,10 @@ System.out.println(tree.toStringTree(parser));
 
 {% endhighlight %}
 
-So the parser has taken the array and broken it down to its compoenents of array start token the integer values and array end token.Now when we look at grammar syntax we can relate to it better.
+So the parser has taken the array and broken it down to its components of array start token the integer values and the array end token.Now when we look at grammar syntax we can relate to it better.
 
- - `init {` refers to start of an array represented in the grammer line no 1`init : '{' `
- - `value` is the Interger values of the array 
+ - `init {` refers to the start of an array represented in the grammar line no 1`init : '{' `
+ - `value` is the Integer values of the array 
 
 ### A bad input
 

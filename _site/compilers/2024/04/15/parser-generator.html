@@ -7,19 +7,19 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Parser Generators an Introduction" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Prologue The first stage of the compilation process is the pasring and undestanding the sytax of a language. Parsers job is look at code and make sure it follows the approved syntax of the grammer and also manipulate code structure to add or extract information" />
-<meta property="og:description" content="Prologue The first stage of the compilation process is the pasring and undestanding the sytax of a language. Parsers job is look at code and make sure it follows the approved syntax of the grammer and also manipulate code structure to add or extract information" />
-<link rel="canonical" href="http://localhost:4000/governing_dynamics/compilers/2024/04/15/parser-generator.html" />
-<meta property="og:url" content="http://localhost:4000/governing_dynamics/compilers/2024/04/15/parser-generator.html" />
+<meta name="description" content="Prologue The first stage of the compilation process is the parsing and understanding of the syntax of a language. The Parsers job is to look at code and make sure it follows the approved syntax of the grammar and also manipulate code structure to add or extract information" />
+<meta property="og:description" content="Prologue The first stage of the compilation process is the parsing and understanding of the syntax of a language. The Parsers job is to look at code and make sure it follows the approved syntax of the grammar and also manipulate code structure to add or extract information" />
+<link rel="canonical" href="/governing_dynamics/compilers/2024/04/15/parser-generator.html" />
+<meta property="og:url" content="/governing_dynamics/compilers/2024/04/15/parser-generator.html" />
 <meta property="og:site_name" content="Governing Dynamics" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-04-15T06:21:52-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Parser Generators an Introduction" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-15T06:21:52-04:00","datePublished":"2024-04-15T06:21:52-04:00","description":"Prologue The first stage of the compilation process is the pasring and undestanding the sytax of a language. Parsers job is look at code and make sure it follows the approved syntax of the grammer and also manipulate code structure to add or extract information","headline":"Parser Generators an Introduction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/governing_dynamics/compilers/2024/04/15/parser-generator.html"},"url":"http://localhost:4000/governing_dynamics/compilers/2024/04/15/parser-generator.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-15T06:21:52-04:00","datePublished":"2024-04-15T06:21:52-04:00","description":"Prologue The first stage of the compilation process is the parsing and understanding of the syntax of a language. The Parsers job is to look at code and make sure it follows the approved syntax of the grammar and also manipulate code structure to add or extract information","headline":"Parser Generators an Introduction","mainEntityOfPage":{"@type":"WebPage","@id":"/governing_dynamics/compilers/2024/04/15/parser-generator.html"},"url":"/governing_dynamics/compilers/2024/04/15/parser-generator.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/governing_dynamics/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/governing_dynamics/feed.xml" title="Governing Dynamics" /></head>
+<link rel="stylesheet" href="/governing_dynamics/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/governing_dynamics/feed.xml" title="Governing Dynamics" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/governing_dynamics/">Governing Dynamics</a><nav class="site-nav">
@@ -48,13 +48,13 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <h3 id="prologue">Prologue</h3>
-<p>The first stage of the compilation process is the pasring and undestanding the sytax of a language. Parsers job is look at code and make sure it follows the approved syntax of the grammer and also manipulate code structure to add or extract information</p>
+<p>The first stage of the compilation process is the parsing and understanding of the syntax of a language. The Parsers job is to look at code and make sure it follows the approved syntax of the grammar and also manipulate code structure to add or extract information</p>
 
 <h3 id="what-are-parser-generators">What are Parser Generators</h3>
-<p>Programs that recognize languages are called parsers or syntax analyzers. A grammar is just a set of rules, each one expressing the structure of a phrase. The ANTLR tool and tools like yaac translates grammars to parsers which are ready made code to parse the defined laguage in the grammar. Grammars themselves follow the syntax of a language optimized for specifying other languages</p>
+<p>Programs that recognize languages are called parsers or syntax analyzers. A grammar is just a set of rules, each one expressing the structure of a phrase. The ANTLR tool and tools like yaac translate grammar to parsers which are ready-made codes to parse the defined language in the grammar. Grammars themselves follow the syntax of a language optimized for specifying other languages</p>
 
 <h3 id="an-example-of-a-grammar">An example of a grammar</h3>
-<p>The grammar below can be used parse an array of integers.</p>
+<p>The grammar below can be used to parse an array of integers.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">grammar</span> <span class="no">ArrayInit</span><span class="p">;</span>
 <span class="n">init</span> <span class="p">:</span> <span class="s1">'{'</span> <span class="n">value</span> <span class="p">(</span><span class="s1">','</span> <span class="n">value</span><span class="p">)</span><span class="o">*</span> <span class="s1">'}'</span> <span class="p">;</span> <span class="c1"># define a array</span>
@@ -66,7 +66,7 @@
 
 <h3 id="how-to-organize-code">How to organize code</h3>
 
-<p>We can organize the code in following way for Antlr to generate parsers from the g4 file. Keep the <code class="language-plaintext highlighter-rouge">g4</code> files in a <code class="language-plaintext highlighter-rouge">antlr4</code> directory and make the sure the package structure matches between the <code class="language-plaintext highlighter-rouge">java</code> code and <code class="language-plaintext highlighter-rouge">antlr4</code></p>
+<p>We can organize the code in the following way for Antlr to generate parsers from the g4 file. Keep the <code class="language-plaintext highlighter-rouge">g4</code> files in a <code class="language-plaintext highlighter-rouge">antlr4</code> directory and make sure the package structure matches between the <code class="language-plaintext highlighter-rouge">java</code> code and <code class="language-plaintext highlighter-rouge">antlr4</code></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">└── exampleAntlr
     ├── LICENSE
@@ -74,21 +74,21 @@
     ├── exampleAntlr.iml
     ├── pom.xml
     ├── src
-    │   └── main
-    │       ├── antlr4
-    │       │   └── com
-    │       │       └── srini
-    │       │           └── antrl4
-    │       │               ├── ArrayInit.g4
-    │       ├── java
-    │       │   └── com
-    │       │       └── srini
-    │       │           └── antrl4
-    │       │               └── TestAntlr.java</code></pre></figure>
+    │   └── main
+    │       ├── antlr4
+    │       │   └── com
+    │       │       └── srini
+    │       │           └── antrl4
+    │       │               ├── ArrayInit.g4
+    │       ├── java
+    │       │   └── com
+    │       │       └── srini
+    │       │           └── antrl4
+    │       │               └── TestAntlr.java</code></pre></figure>
 
 <h3 id="run-the-generated-parser">Run the generated parser</h3>
-<p>A maven install can generate the lexer parser for the g4 grammar. 
-The below code can take an array like <code class="language-plaintext highlighter-rouge">{1,2,3,4}</code> and parse it and form the tree of the its components.</p>
+<p>A Maven install can generate the lexer parser for the g4 grammar. 
+The below code can take an array like <code class="language-plaintext highlighter-rouge">{1,2,3,4}</code> and parse it and form the tree of its components.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">ANTLRInputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ANTLRInputStream</span><span class="o">(</span><span class="s">"{1,2,3,4}"</span><span class="o">);</span>
 <span class="nc">ArrayInitLexer</span> <span class="n">lexer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayInitLexer</span><span class="o">(</span><span class="n">input</span><span class="o">);</span> 
@@ -101,11 +101,11 @@ The below code can take an array like <code class="language-plaintext highlighte
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>init <span class="o">{</span> <span class="o">(</span>value 1<span class="o">)</span> , <span class="o">(</span>value 2<span class="o">)</span> , <span class="o">(</span>value 3<span class="o">)</span> , <span class="o">(</span>value 4<span class="o">)</span> <span class="o">})</span></code></pre></figure>
 
-<p>So the parser has taken the array and broken it down to its compoenents of array start token the integer values and array end token.Now when we look at grammar syntax we can relate to it better.</p>
+<p>So the parser has taken the array and broken it down to its components of array start token the integer values and the array end token.Now when we look at grammar syntax we can relate to it better.</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">init {</code> refers to start of an array represented in the grammer line no 1<code class="language-plaintext highlighter-rouge">init : '{' </code></li>
-  <li><code class="language-plaintext highlighter-rouge">value</code> is the Interger values of the array</li>
+  <li><code class="language-plaintext highlighter-rouge">init {</code> refers to the start of an array represented in the grammar line no 1<code class="language-plaintext highlighter-rouge">init : '{' </code></li>
+  <li><code class="language-plaintext highlighter-rouge">value</code> is the Integer values of the array</li>
 </ul>
 
 <h3 id="a-bad-input">A bad input</h3>
@@ -117,7 +117,6 @@ line 1:7 token recognition error at: <span class="s1">'a'</span>
 line 1:8 token recognition error at: <span class="s1">'d'</span>
 line 1:9 token recognition error at: <span class="s1">'a'</span>
 line 1:10 token recognition error at: <span class="s1">'s'</span></code></pre></figure>
-
 
   </div><a class="u-url" href="/governing_dynamics/compilers/2024/04/15/parser-generator.html" hidden></a>
 </article>
