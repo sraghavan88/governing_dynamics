@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "For a better unit test coverage that actually test"
+title:  "Coverage is cheap, Can it catch bugs?"
 date:   2024-04-16 06:21:52 -0400
 categories: Testing
 ---
