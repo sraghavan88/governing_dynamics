@@ -149,6 +149,8 @@ So, the above tests the concurrency aspect of the updates and uses data JPA test
 
 Testing reflective code always has challenges as there is a tendency to mock interfaces that are executed only at runtime. So traditional code coverage metrics may not tell if the code is well-tested.
 
+And having the testing just to have code coverage is a bad idea with reflective frameworks
+
 "Coverage is cheap, Can it catch bugs? is the real deal".
 
 So when you mock everything u test nothing. One may get good code coverage but cannot catch bugs
